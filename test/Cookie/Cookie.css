@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    caret-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background-color: #faead3;
+    color: saddlebrown;
+}
+
+#btn1 {
+    margin: 5px;
+    border: 5px solid #737373;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: aliceblue;
+}
+#btn1 h2 {
+    padding: 8px 10px;
+}
+
+#btn1 :hover {
+    background-color: #00ffbb65;
+}
+
+#btn1 :active {
+    background-color: #00ffbb;
+}

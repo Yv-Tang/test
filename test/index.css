@@ -1,0 +1,17 @@
+@font-face {
+    font-family: self;
+    src: url();
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    text-align: center;
+}
+
+h2 {
+    font-family: self;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var number = 100000000 + Math.floor(Math.random() * 100000 + 1);
+        function self() {
+            var pid = document.getElementById("self").value;
+            document.getElementById("img3").src = "";
+            document.getElementById("img3").src = "https://pixiv.cat/" + pid + ".jpg";
+        }
+        function self_next() {
+            var or = 1;
+            or = or + 1;
+            document.getElementById("img3").src = "";
+            document.getElementById("img3").src = "https://pixiv.cat/" + pid + "-" + or + ".jpg";
+        }
+        function last() {
+            //
+            number = number - 1;
+            //console.log("number");
+            //    
+            http()
+            //console.log("http");
+            //
+            num()
+            //console.log("num")
+        }
+        function next() {
+            //
+            number = number + 1;
+            //console.log("number");
+            //    
+            http()
+            //console.log("http");
+            //
+            num()
+            //console.log("num")
+        }
+        function http() {
+            document.getElementById("img").src = "";
+            document.getElementById("img").src = "https://pixiv.cat/" + number + ".jpg";
+            document.getElementById("img2").src = "";
+            document.getElementById("img2").src = "https://pixiv.cat/" + (number + 200) + ".jpg";
+        }
+        function num() {
+            document.getElementById("num").innerText = number
+        }
+    </script>
+    <style>
+        body {
+            text-align: center;
+            background: #252839;
+        }
+
+        h1,
+        h2 {
+            size: 18;
+            color: #b700ff;
+        }
+
+        .btn-box {
+            color: #0084ff;
+            font-weight: bold;
+
+            margin: 10px;
+            min-width: auto;
+            background-color: #01010100;
+
+            /*--*/
+
+            border-top-color: #01010100;
+            border-bottom-color: #01010100;
+
+            border-right-color: #0084ff;
+            border-left-color: #0084ff;
+
+            /*--*/
+        }
+
+        .btn-box button:hover {
+            color: #135453;
+        }
+
+        img {
+            float: left;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>测试</h1>
+    <div>
+        <h1>PID</h1>
+        <h1 id="num">PID</h1>
+        <div>
+            <button class="btn-box" onclick="last()">上一张</button>
+            <button class="btn-box" onclick="next()">下一张</button>
+        </div>
+        <div>
+            <img src="http://a1.qpic.cn/psc?/V13jqv572k4y9P/ruAMsa53pVQWN7FLK88i5ibSLtLzp02wwlPCh.tWarvZRESxb65y2z.jc3wdfn4dqVi3jKUeongJWm.*BBBia33259OJhtlUYTIOO434Dew!/c&ek=1&kp=1&pt=0&bo=OASSBQAAAAABF5s!&t=5&tl=3&vuin=168766779&tm=1659268800&dis_t=1659272191&dis_k=241c98c96bc03764d3aa4d76f24226b7&sce=60-2-2&rf=0-0"
+                alt="error" width="50%" height="50%" id="img">
+            <img src="http://a1.qpic.cn/psc?/V13jqv572k4y9P/ruAMsa53pVQWN7FLK88i5ibSLtLzp02wwlPCh.tWarvZRESxb65y2z.jc3wdfn4dqVi3jKUeongJWm.*BBBia33259OJhtlUYTIOO434Dew!/c&ek=1&kp=1&pt=0&bo=OASSBQAAAAABF5s!&t=5&tl=3&vuin=168766779&tm=1659268800&dis_t=1659272191&dis_k=241c98c96bc03764d3aa4d76f24226b7&sce=60-2-2&rf=0-0"
+                alt="error" width="50%" height="50%" id="img2">
+        </div>
+    </div>
+
+    <div>
+        <h1>自定义</h1>
+        <input type="text" id="self">
+        <button onclick="self()">查看</button><button onclick="self_next()">下一张</button>
+        <div>
+            <img src="" style="text-align: center;" alt="error" width="60%" height="60%" id="img3">
+        </div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31421668",
+      "name": "书签",
+      "font_class": "shuqian",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "31425446",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "31426547",
+      "name": "列表",
+      "font_class": "liebiao",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    }
+  ]
+}

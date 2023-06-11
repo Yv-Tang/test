@@ -1,0 +1,44 @@
+{
+    "manifest_version": 3, //清单版本
+    "name": "融宇", //插件名称
+    "version": "0.9.9", //插件版本
+    //"default_locale": "zh_CN", //默认语言
+    "description": "简单的测试插件", //描述
+    "author": "universe", //作者
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },  //图标
+
+    "action": { //浏览器级别行为，所有页面均生效
+        "default_icon": "images/icon.png", //图标的图片
+        "default_popup": "popup.html", //单击图标后弹窗页面
+        "default_title": "查看" //鼠标移到图标显示的文字
+    },
+
+    // 内容脚本一般植入会被植入到页面中, 并且可以控制页面中的dom.
+    "content_scripts": [
+        {
+            "matches": [
+                "http://cr202251021.stu.teacher.com.cn/*",
+                "https://*/*"
+            ],
+            "js": [
+                "scripts/functions.js",
+                "scripts/event.js"
+            ]
+        }
+    ],
+
+    // 数组，声明插件所需要的权限，这里就是很危险的存在了，想干坏事的你是不是很激动！
+    "permissions": [
+        "cookies", // 使用cookies
+        "webRequest", //使用web请求
+        "management", //
+        "storage", //使用本地存储
+        "tabs", //操作标签
+        "contextMenus", //右键菜单
+        "notifications"
+    ]
+}
